@@ -1,8 +1,8 @@
-<div class="page-width yx-mobile-banner-container yx-desktop-hidden">
+<div class="page-width yx-desktop-banner-container yx-mobile-hidden">
  
  <div class="container-full">
    {% for block in section.blocks limit: 1 %}
-	<img class="img-responsive lazyload"  data-src="{{ block.settings.yx_image_picker | img_url: '750x' }}" />
+	<img class="img-responsive lazyload"  data-src="{{ block.settings.yx_image_picker | img_url: '2000x' }}" />
    {% endfor %}
    
 </div>
@@ -10,17 +10,17 @@
 
 {% schema %}
   {
-    "name": "YX Mobile Banner",
-	"class": "yx-mobile-banner-section",
+    "name": "YX Desktop Banner",
+	"class": "yx-desktop-banner-section",
 "max_blocks": 1,
   
 "blocks": [
     {
       "type": "image_picker",
-      "name": "Mobile Banner Image",
+      "name": "Desktop Banner Image",
       "settings": [
         {
-          "label": "Mobile Banner Image",
+          "label": "Desktop Banner Image",
           "id": "yx_image_picker",
           "type": "image_picker"
         }
@@ -31,7 +31,7 @@
 
  "presets": [
     {
-      "name": "YX Mobile Banner",
+      "name": "YX Desktop Banner",
       "category": "Home",
 	  "blocks":[{"type" : "image_picker"}]
     }
@@ -45,3 +45,4 @@
 
 {% javascript %}
 {% endjavascript %}
+
