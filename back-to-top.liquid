@@ -1,0 +1,64 @@
+{% comment %} 
+  vertical_offset -  Control how far scroll down make back to top button appear
+  That value is in pixels.
+  pos_from_bottom - set button position offset from bottom of browser
+{% endcomment %}
+{% assign vertical_offset = 300 %}
+{% assign pos_from_bottom = '50%' %}
+<a href="#" title="Back to the top" class="yx-back-to-top">
+ <i class="fa fa-arrow-circle-o-up fa-2x"></i> 
+</a>
+{{ '//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css' | stylesheet_tag }}
+<style>
+.back-to-top {
+  position: fixed;
+  bottom: {{ pos_from_bottom }};
+  right: 0px;
+  text-decoration: none;
+  color: #999;
+  font-size: 16px;
+  padding: 0.3em;
+  display: none;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  z-index: 60000;
+}
+.yx-back-to-top i {
+  vertical-align: middle;
+}
+.yx-back-to-top span {
+  padding-left: 0.5em;
+}
+.yx-back-to-top i + span {
+  padding-left: 0;
+}
+.yx-back-to-top:hover {
+  text-decoration: none;
+  color: #555;
+}
+</style>
+<script>
+ (function($) {
+   $(document).ready(function(e){
+     var offset = {{ vertical_offset }};
+     var duration = 500;
+     $(window).scroll(function() {
+       if ($(this).scrollTop() > offset) {
+         $('.back-to-top').fadeIn(duration);
+       } 
+       else {
+         $('.back-to-top').fadeOut(duration);
+       }
+     });
+     $('.back-to-top').unbind('click.smoothscroll').bind('click', function(e) {
+       e.preventDefault();
+       $('html, body').animate( { scrollTop: 0 }, duration);
+       return false;
+     })
+   });
+ })(jQuery);
+</script>
