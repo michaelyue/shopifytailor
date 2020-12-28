@@ -9,8 +9,14 @@ more details please view <a href="https://www.mojoin.com/get-shopify-product-dat
 
 tip 2
 -----
-
 yx-desktop-banner.liquid
 yx-mobile-banner.liquid 
 for showing different banner images for Shopify Store
-more details please view <a href="https://www.mojoin.com/show-shopify-banner-image/?utm_source=github&utm_medium=inreadme">here </a>.
+more details please view <a href="https://www.mojoin.com/show-shopify-banner-image?utm_source=github&utm_medium=inreadme">here </a>.
+
+tip 3
+------
+back-to-top.liquid
+Implementation of adding a BACK TO TOP floating button for Shopify Store
+more details please view <a href="https://www.mojoin.com/shopify-back-to-top-button?utm_source=github&utm_medium=inreadme">here </a>.
+
