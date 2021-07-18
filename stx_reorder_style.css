@@ -1,0 +1,80 @@
+/* reorder style */
+
+@-webkit-keyframes rotating{
+    from{
+        -webkit-transform:rotate(0deg);
+        -o-transform:rotate(0deg);
+        transform:rotate(0deg)
+    }
+    to{
+        -webkit-transform:rotate(360deg);
+        -o-transform:rotate(360deg);
+        transform:rotate(360deg)
+    }
+}
+@keyframes rotating{
+    from{
+        -ms-transform:rotate(0deg);
+        -moz-transform:rotate(0deg);
+        -webkit-transform:rotate(0deg);
+        -o-transform:rotate(0deg);
+        transform:rotate(0deg)
+    }
+    to{
+        -ms-transform:rotate(360deg);
+        -moz-transform:rotate(360deg);
+        -webkit-transform:rotate(360deg);
+        -o-transform:rotate(360deg);
+        transform:rotate(360deg)
+    }
+}
+
+
+.pt-spinner {
+    -webkit-animation: rotating .5s linear infinite;
+    animation: rotating .5s linear infinite;
+    height: 100%;
+  
+}
+
+.pt-spinner-container{
+  display: none;
+  height: 22px;
+  margin-top: -4px;
+}
+
+.reorder-btn{
+  width: 100px;
+  height: 38px;
+  display: inline-block;
+  padding: 12px 14px 9px;
+  margin: 0;
+  line-height: 1;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  font-size: 13px;
+  background-color: #fdb819;
+  color: #000;
+  -webkit-transition: background-color 0.2s ease-out;
+  -moz-transition: background-color 0.2s ease-out;
+  -ms-transition: background-color 0.2s ease-out;
+  -o-transition: background-color 0.2s ease-out;
+  transition: background-color 0.2s ease-out;
+}
+.reorder-btn:hover{
+  background-color: #fdb819;
+}
+
+
+.reorder-btn.loading .pt-spinner-container{
+  display: inline-block;
+}
+
+.reorder-btn.loading .pt-reorder-text{
+  display: none;
+}
+/* reorder style end */
